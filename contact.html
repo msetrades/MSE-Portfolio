@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101712"><meta name="description" content="Contact Mmedara Sunday Ekanem about data science, AI, quantitative research, software, or security research opportunities.">
+  <title>Contact | The MSE Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/overrides.css">
+</head>
+<body class="contact-page">
+  <header class="nav wrap"><a class="wordmark" href="/"><span class="mark">M</span> THE MSE PORTFOLIO</a><a class="nav-cta" href="/">Back to portfolio <span>↗</span></a></header>
+  <main class="contact-card wrap">
+    <p class="eyebrow">CONTACT / COLLABORATE</p><h1>Let’s talk about <em>what you’re building.</em></h1>
+    <p class="contact-intro">For data science, AI, quantitative research, software, or application security opportunities, reach out directly by email.</p>
+    <a class="contact-email" href="mailto:sundayekanem418@gmail.com">sundayekanem418@gmail.com</a>
+    <div class="contact-actions"><a class="button primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sundayekanem418%40gmail.com&amp;su=Portfolio%20inquiry" target="_blank" rel="noopener noreferrer">Write in Gmail <b>↗</b></a><button class="button copy-email" id="copy-email" type="button">Copy email</button></div>
+    <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+    <p class="contact-fallback">If Gmail does not open, click the email address above or copy it into your preferred email app.</p>
+  </main>
+  <footer class="footer wrap"><a class="wordmark" href="/"><span class="mark">M</span> THE MSE PORTFOLIO</a><span>Mmedara Sunday Ekanem · Akwa Ibom, Nigeria</span><span>© <span id="year"></span></span></footer>
+  <script>
+    const email = 'sundayekanem418@gmail.com';
+    const button = document.getElementById('copy-email');
+    const status = document.getElementById('copy-status');
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(email);
+        status.textContent = 'Email copied.';
+      } catch {
+        window.location.href = `mailto:${email}`;
+        status.textContent = 'Opening your email app. You can also select the address above.';
+      }
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
