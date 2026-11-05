@@ -1,4 +1,4 @@
-# MSE Trades Portfolio
+# The MSE Portfolio
 
 Static portfolio and print-ready résumé site. Deploy as a standalone project to Vercel.
 
